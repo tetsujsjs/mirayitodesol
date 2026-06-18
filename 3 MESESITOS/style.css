@@ -1,0 +1,283 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, #050505, #0f172a);
+    color:white;
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+
+/* Separación entre secciones */
+section{
+    padding:80px 20px;
+}
+
+/* Títulos */
+h1{
+    color:#3da9fc;
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#3da9fc;
+    margin-bottom:30px;
+}
+
+h3{
+    color:#ff4d4d;
+    margin-bottom:15px;
+}
+
+/* Inicio */
+.inicio{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* Carta */
+.contenido-carta{
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    padding:35px;
+    border-radius:25px;
+    border:1px solid #3da9fc;
+    box-shadow:
+0 0 10px #3da9fc,
+0 0 25px rgba(61,169,252,0.5),
+0 0 50px rgba(61,169,252,0.3);
+}
+
+/* Tarjetas */
+.tarjeta{
+    max-width:800px;
+    margin:30px auto;
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.4s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,77,77,0.3);
+}
+
+/* Imagen */
+.carrusel img{
+    width:400px;
+    max-width:90%;
+    border-radius:20px;
+    border:2px solid #3da9fc;
+}
+
+/* Contador */
+#cuenta{
+    font-size:25px;
+    color:#ff4d4d;
+}
+
+/* Botón */
+button{
+    background:#3da9fc;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    background:#ff4d4d;
+    transform:scale(1.05);
+}
+h1{
+    text-shadow:
+    0 0 10px #3da9fc,
+    0 0 20px #3da9fc;
+}
+
+h2{
+    text-shadow:
+    0 0 8px #3da9fc;
+}.corazon{
+    position:fixed;
+    bottom:-20px;
+    color:#ff3b5f;
+    font-size:25px;
+    pointer-events:none;
+    animation:subir linear forwards;
+    text-shadow:
+    0 0 10px #ff3b5f,
+    0 0 20px #ff3b5f;
+}
+
+@keyframes subir{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}.contenedor-carrusel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+#foto{
+    width:500px;
+    max-width:90%;
+    border-radius:25px;
+
+    box-shadow:
+    0 0 15px #3da9fc,
+    0 0 35px rgba(61,169,252,0.5);
+}
+
+#fraseFoto{
+    margin-top:20px;
+    color:#ff6b6b;
+}
+
+#anterior,
+#siguiente{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+}.sobre{
+    max-width:700px;
+    margin:25px auto;
+}
+
+.mensaje{
+    display:none;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    margin-top:15px;
+    border-radius:20px;
+    border:1px solid #3da9fc;
+
+    box-shadow:
+    0 0 15px rgba(61,169,252,0.4);
+}
+#mensajeFinal{
+    display:none;
+    max-width:800px;
+    margin:30px auto;
+    padding:30px;
+
+    background:rgba(255,255,255,0.05);
+
+    border-radius:25px;
+
+    border:1px solid #ff4d4d;
+
+    box-shadow:
+    0 0 20px rgba(255,77,77,0.4);
+}
+#subir{
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    font-size: 25px;
+
+    background: #3da9fc;
+
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow:
+    0 0 15px #3da9fc,
+    0 0 30px rgba(61,169,252,0.5);
+
+    transition: 0.4s;
+}
+
+#subir:hover{
+
+    background: #ff4d4d;
+
+    transform: scale(1.1);
+
+}
+.estrellas{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.estrella{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation: titilar 2s infinite alternate;
+}
+
+@keyframes titilar{
+
+    from{
+        opacity:0.2;
+        transform:scale(1);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.8);
+    }
+
+}
+.oculto{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all 1s ease;
+
+}
+
+.mostrar{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
